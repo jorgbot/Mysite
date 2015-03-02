@@ -1,8 +1,6 @@
-var $recent = $('#recent');
 
 
 $(function(){
-
 
 	/*var animationSupport = false;
 
@@ -55,61 +53,16 @@ $(function(){
 		}
 		noKeyFrames();
 	 }
-	*/	
-
-	//portfolio scroll
-
-	$('.portfolio').on('click', function() {
-		$('html,body').animate({
-          scrollTop: $recent.offset().top
-        }, 1500);
-		return false;
-	});
-
-	//add bg to inputs on blur if value is entered
-
-	$('input[type="text"], textarea').on('blur', function() {
-		var $this = $(this);
-		if(!$this.val()) {
-			$this.css('background', 'transparent');
-			$this.siblings('label').removeClass('filled');
-		} else {
-			$this.css('background', '#fff');
-			$this.siblings('label').addClass('filled');
-		}
-	});
+		
 	
-
-	//nav toggle
+	/=========================================
+		nav toggle
+	=========================================
 	
 	$('.navToggle').on('click', function() {
-		$(this).toggleClass('active');
-		setTimeout(function() {
-			$('#mainNav').toggleClass('open');
-		}, 200);
+		$('body').toggleClass('opened');
 		return false;
-	});
-
-	//toggle cats menu
-	
-	$('.catLink').on('click', function() {
-		$(this).toggleClass('catagory');
-		
-		return false;
-	});
-
-	//shorten text and add elipse on blog roll
-	
-	$('.post-item p').each(function() {
-		var $this = $(this);
-		var post = $this.text();
-		var maxLength = 150;
-		if (post.length > maxLength) {
-	        post = post.substr(0,maxLength-3) + "...";
-	    }
-	    $this.text(post);
-	    return post;
-	});
+	});*/
 	
 	
 	

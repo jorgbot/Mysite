@@ -1,0 +1,90 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout/sticky-footer";
+
+ 
+//////////////////////////////
+//fonts   ///////////////////
+////////////////////////////
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900);
+@import url(http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,900italic,900,200);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+
+//////////////////////////////
+//variables  ////////////////
+////////////////////////////
+
+//font
+$source: 'Source Sans Pro', sans-serif; 
+$orb: 'Orbitron', sans-serif;
+$exo: 'Exo 2', sans-serif;
+$lato: 'Lato', sans-serif;
+
+
+//overlay
+$zBg: 0;
+$zNormal: 100;
+$zOverlay: 500;
+$zOverlayContent: 900;
+
+//colors
+$mainColor: #3498DB;//#3c948b;
+$darkGrey: #343434;
+$color-light: #2980b9;
+$red: #EF4836;
+
+
+//////////////////////////////////
+//mixins //////////////////
+////////////////////////////////
+
+@mixin mediaBP($point) {
+	@if $point == xSmall {
+	@media (min-width: 400px) { @content; }
+	}
+	@if $point == small {
+	@media (min-width: 600px) { @content; }
+	}
+	@else if $point == medium {
+	@media (min-width: 768px) { @content; }
+	}
+	@else if $point == large {
+	@media (min-width: 1024px)  { @content; }
+	}
+	@else if $point == xLarge {
+	@media (min-width: 1280px)  { @content; }
+	}
+}
+
+@mixin bounce() {
+	-webkit-animation-timing-function: cubic-bezier(0.6,1.5,0.6,1);
+	-moz-animation-timing-function: cubic-bezier(0.6,1.5,0.6,1);
+	animation-timing-function: cubic-bezier(0.6,1.5,0.6,1);
+}
+
+@mixin partAnim($num) {
+	-webkit-animation: animPart#{$num} 6s infinite;
+	-moz-animation: animPart#{$num} 6s infinite;
+	animation: animPart#{$num} 6s infinite;
+}
+
+@mixin code {
+	-webkit-animation: code 6s infinite;
+	-moz-animation: code 6s infinite;
+	animation: code 6s infinite;
+}
+
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes $animationName {
+        @content;
+    }
+    @-moz-keyframes $animationName {
+        @content;
+    }
+    @keyframes $animationName {
+        @content;
+    }
+}
