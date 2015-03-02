@@ -1,0 +1,102 @@
+@import "reset";
+@import "base";
+@import "grid";
+@import "typography"; 
+@import "buttons"; 
+@import "header";
+@import "hero";
+@import "modern-web";
+@import "recent-work";
+@import "skills";
+@import "contact";
+@import "blog";
+@import "footer";
+ 
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0; 
+	padding: 0;
+}
+
+body {
+	background: url('/images/heroBg.jpg') repeat;
+}
+
+img {
+	max-width: 100%;
+}
+
+.page,
+.pageWrap {
+	width: 100%;
+	height: 100%;
+	
+}
+
+.section {
+	display: table;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	padding: 1.25em;
+	@include bp(medium) { padding: 2.25em; }
+
+	@media (max-height: 400px) {
+		display: block;
+		height: auto;
+	}
+
+}
+
+.contentWrap {
+	display: table-cell;
+	left: 0;
+	margin: 0 auto;
+	max-width: 1280px;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	z-index: $zNormal;
+
+	@media (max-height: 400px) {
+		display: block;
+		height: auto;
+	}
+
+}
+
+.container {
+  font-size: 0;
+  margin: 0 auto;
+  width: 100%;
+  
+  [class*="grid"] {
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 2%;
+    padding: 1em;
+    
+    &:last-child { 
+      margin-right: 0;
+    }
+  }
+}
+
+
+.fadedOut {
+	position: relative;
+	top: 10%;
+	opacity: 0;
+	@include single-trans(all, 0.45s, linear);
+}
+
+.fadeIn {
+	top: 0;
+	opacity: 1;
+	@include single-trans(all, 0.45s, linear);
+}

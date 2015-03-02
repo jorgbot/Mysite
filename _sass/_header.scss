@@ -1,0 +1,147 @@
+@import "base";
+@import "navigation";
+
+.header-main {
+	font-size: 1rem;
+	padding-bottom: 1.5em;
+	padding-top: 1em;
+	text-align: center;
+	width: 100%;
+	background: url('/images/heroBg.jpg') repeat;
+	@include cf;
+
+	.logoLink {
+		color: $darkGrey;
+		display: inline-block;
+		font-family: $orb;
+		overflow: hidden;
+		position: relative;
+		text-decoration: none;
+		vertical-align: top;
+
+		@include bp(medium) {
+			padding: .5em 0;
+		}
+		
+		.path{
+			stroke-dasharray: 333.213;
+			stroke-dashoffset: 0;
+			/*animation*/
+			@include dash;
+			@include single-trans(all, 400ms, ease-in, 0ms);	
+		}
+		 
+		&:hover {
+			.path {
+				fill: $mainColor;
+				stroke: #fff;
+			}
+		}
+
+		hr {
+			margin: 0.5em 0 0;
+			border: 1px solid;
+		}
+	}
+
+	.blog & {
+		background: $darkGrey;
+		padding: .5em 1em;
+		text-align: center;
+		@include bp(medium) {
+			text-align: left;
+		}
+
+		.header-wrap {
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+	}
+
+	.blog & .blog-logo {
+		color: #fff;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+
+		svg {
+			vertical-align: middle;
+		}
+
+		.site-header {
+			color: #fff;
+			display: inline-block;
+			line-height: 1;
+			margin: 0 0 0 .25em;
+			vertical-align: middle;
+			@media (max-width: 768px) {
+				font-size: 1.35em;
+				margin: 0 0 0 .2em;
+			}
+			@include bp(medium) {
+				font-size: 1.77em;
+			}
+
+			@include rbp(867) {
+				font-size: 2.369em;
+			}
+		}
+	}	
+	
+}
+
+.home .header-main {
+	@media (min-height: 770px) {
+		background: none;
+		left: 0;
+		position: absolute;
+		top: 0;
+		z-index: $zOverlay;
+	}
+}
+
+////////////////////////////////////
+// Keyframes ////////////////////
+//////////////////////////////////
+
+//logo svg animation
+
+@-webkit-keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+@-moz-keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+@-ms-keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+
+
+@keyframes dash {
+	from {
+		stroke-dashoffset: 333.213;
+	}
+	to {
+		stroke-dashoffset: 0; 
+	}
+}
+
+
