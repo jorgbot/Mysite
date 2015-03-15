@@ -1,6 +1,9 @@
 @import url(http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css);
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
-
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+body{
+    background: #D7CCC8;
+}
 img{
     max-width: 100%;
     width: 50%;
@@ -12,4 +15,7 @@ img{
 }
 .nombre{
     font-family: 'Pacifico', cursive;
+}
+.acerca{
+    font-family: 'Gudea', sans-serif;
 }
