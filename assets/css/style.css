@@ -1,21 +1,141 @@
+/*Import*/
 @import url(http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css);
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 @import url(http://fonts.googleapis.com/css?family=Gudea);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/* Icons FontAwesome */
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css);
+/*Barra*/
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: .3em;
+  background-color: #cbcbcb;
+}
+::-webkit-scrollbar-thumb {
+  background: #212121;
+}
+/**menu responsive**/
+.menu_btn {
+  background: #fff url(../img/menu.png) center center no-repeat;
+  display:block;
+  height:42px;
+  width:42px;
+  position:absolute;
+  top:0;
+  right:30px;
+}
+
+#menu {
+  height:100%;
+  position:fixed;
+  background:#222;
+  top:0;
+  bottom:0;
+  height:100%;
+  width:150px;
+  right:-240px;
+  z-index:9999;
+}
+
+#menu ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  color:white;
+}
+
+#menu ul li {
+  height:47px;
+  padding-left:30px;
+  line-height:47px;
+  border-bottom:1px solid #848484;
+}
+
+#menu ul li.active {
+  background:#1E88E5; 
+}
+
+#menu ul li:hover {
+  background:#1E88E5;   
+}
+
+#menu ul li a {
+  color:white;
+  text-decoration:none;
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  display:block;
+}
+
+.close {
+  display:block;
+  background:#373737 url(../img/cerrar.png) center center no-repeat;
+  height:47px;
+  width:47px;
+  position:absolute;
+  top:0;
+  left:-47px; 
+}
 body{
-    background: #D7CCC8;
+    background: #E1E9EA;
+    font-family: 'Lato', sans-serif;
 }
 img{
-    max-width: 100%;
-    width: 50%;
-    height: 50%;
+    max-width: 50%;
 }
-.centro-float{
+a,.azul{
+    color: #05A3DE;
+}
+.quitar-float{
+    float: none;
+}
+.centro{
     float: none;
     margin-top: 100px;
 }
+.centro-vert{
+    vertical-align: top;
+}
+.espacio{
+    margin-right: 1em;
+}
 .nombre{
     font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    color: #0087D0;
+}
+.nombre-letra{
+    font-family: 'Gudea', sans-serif;
+    color: #6F736E;
+}
+.mediano{
+    font-size: 1.2em;
 }
 .acerca{
     font-family: 'Gudea', sans-serif;
+}
+.nav-color{
+    background-color: #B8BEB6;
+}
+.padding-largo{
+    padding: 5px 10px;
+}
+.inline-block{
+    float: none;
+    display: inline-block;
+    margin-right: -4px;
+}
+.no-list {
+    margin: 0px;
+    padding: 0px;
+}
+.no-list li{
+    list-style-type: none;
 }
